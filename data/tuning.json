@@ -1,0 +1,62 @@
+{
+  "version": "0.1",
+  "energy": {
+    "initial": 100,
+    "min": 0,
+    "max": 100,
+    "passiveDrainPerSecond": 0.22,
+    "lowThreshold": 25,
+    "lowDrainMultiplier": 1.25,
+    "onCorrect": 3,
+    "onWrong": -8,
+    "onQuestion": -4,
+    "onQuestionWaspada": -6
+  },
+  "trust": {
+    "initial": 60,
+    "min": 0,
+    "max": 100,
+    "onCorrect": 8,
+    "onWrong": -15,
+    "tiers": {
+      "percaya": {
+        "min": 60,
+        "max": 100,
+        "label": "Percaya",
+        "description": "Nenek bercerita dengan terbuka dan memberi petunjuk lengkap.",
+        "clueDurationMs": 5500,
+        "gestureLoops": 3
+      },
+      "ragu": {
+        "min": 30,
+        "max": 59,
+        "label": "Ragu",
+        "description": "Nenek agak berhati-hati; sorotan benda hanya muncul sebentar.",
+        "clueDurationMs": 2200,
+        "gestureLoops": 1
+      },
+      "waspada": {
+        "min": 0,
+        "max": 29,
+        "label": "Waspada",
+        "description": "Nenek enggan menunjuk terlalu jelas; pertanyaan menguras lebih banyak energi.",
+        "clueDurationMs": 0,
+        "gestureLoops": 0
+      }
+    }
+  },
+  "guessing": {
+    "maxAttemptsPerWord": 2,
+    "choicesPerWord": 4,
+    "targetWordsToWin": 15,
+    "totalWords": 20
+  },
+  "questions": {
+    "maxPerSession": 6
+  },
+  "endings": {
+    "fullWinMin": 20,
+    "winMin": 18,
+    "thinWinMin": 15
+  }
+}

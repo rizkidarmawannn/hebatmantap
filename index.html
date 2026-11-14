@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id" data-text-size="medium" data-contrast="normal">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melestarikan: Tutur Terakhir</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <!-- TITLE SCREEN OVERLAY -->
+    <section id="title-screen" class="overlay-screen active" aria-labelledby="game-title">
+      <div class="title-card">
+        <div class="title-pill">Prototipe Test-Jalan · v0.1</div>
+        <h1 id="game-title" class="game-title">Melestarikan:<br /><span>Tutur Terakhir</span></h1>
+        <p class="title-pitch">
+          Duduklah di teras rumah Nenek Wati saat senja. Dengarkan ceritanya, amati gestur dan benda di sekitar, lalu catat kata-kata terakhir sebelum energinya habis.
+        </p>
+
+        <div class="title-goals">
+          <div class="goal-chip">
+            <span class="chip-icon" aria-hidden="true">📖</span>
+            <span>Catat minimal <strong>15 / 20 kata</strong></span>
+          </div>
+          <div class="goal-chip">
+            <span class="chip-icon" aria-hidden="true">🕯️</span>
+            <span>Jaga <strong>Energi &amp; Kepercayaan</strong> Nenek</span>
+          </div>
+          <div class="goal-chip">
+            <span class="chip-icon" aria-hidden="true">⏱️</span>
+            <span>Satu sore · <strong>5–8 menit</strong></span>
+          </div>
+        </div>
+
+        <div class="cultural-notice" id="cultural-notice">
+          Purwarupa ini menggunakan <strong>Bahasa Talu (bahasa daerah fiktif)</strong> untuk menguji mekanik &amp; alur cerita sebelum validasi bersama penutur asli.
+        </div>
+
+        <div class="title-actions">
+          <button id="btn-start" class="btn btn-primary btn-lg">Mulai Bercerita</button>
+          <button id="btn-how-to" class="btn btn-secondary">Cara Bermain</button>
+          <button id="btn-title-settings" class="btn btn-ghost">Pengaturan</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN GAME WORKSPACE -->
+    <header class="hud-bar" aria-label="Status Permainan">
+      <div class="hud-left">
+        <div class="hud-energy" id="hud-energy-box">
+          <div class="hud-label-row">
+            <span class="hud-label"><span aria-hidden="true">🕯️</span> Energi Nenek</span>
+            <span class="hud-value" id="energy-label">100%</span>
+          </div>
+          <div class="energy-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" id="energy-bar-aria">
+            <div class="energy-fill" id="energy-fill" style="width: 100%"></div>
+          </div>
+          <span class="low-energy-badge hidden" id="low-energy-badge">! Nenek mulai batuk &amp; melambat</span>
+        </div>
+
+        <div class="hud-counter" id="hud-counter-box" aria-live="polite">
+          <span class="hud-label"><span aria-hidden="true">📖</span> Kata Tercatat</span>
+          <div class="counter-value-row">
+            <strong id="word-counter">0/15</strong>
+            <span class="counter-status" id="counter-status">Target: 15</span>
+          </div>
+        </div>
+
+        <div class="hud-trust" id="hud-trust-box">
+          <span class="hud-label"><span aria-hidden="true">💛</span> Hati Nenek</span>
+          <div class="trust-badge" id="trust-badge">
+            <span id="trust-tier-text">Percaya</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hud-right">
+        <button id="btn-toggle-book-mobile" class="btn btn-book-toggle" aria-expanded="false">
+          <span aria-hidden="true">📖</span> Buku <span class="badge-pill" id="mobile-unguessed-badge">0</span>
+        </button>
+        <button id="btn-pause" class="btn btn-icon" title="Jeda &amp; Pengaturan" aria-label="Jeda dan Pengaturan">
+          <span aria-hidden="true">⚙️</span> <span class="hide-sm">Jeda</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="game-layout">
+      <!-- LEFT COLUMN: PIXEL SCENE + DIALOG + QUESTIONS -->
+      <section class="story-column" aria-label="Layar Cerita dan Dialog">
+        <div class="stage-wrapper">
+          <canvas id="scene-canvas" aria-label="Suasana teras rumah panggung Nenek Wati saat senja"></canvas>
+          <div class="stage-overlay-top">
+            <span class="segment-pill" id="segment-pill">Pengantar di Teras</span>
+            <span class="terrace-toast hidden" id="terrace-toast" role="status"></span>
+          </div>
+        </div>
+
+        <!-- DIALOG BOX -->
+        <div class="dialog-panel" id="dialog-panel" tabindex="0" aria-label="Kotak Dialog Nenek Wati">
+          <div class="dialog-header">
+            <span class="speaker-name" id="speaker-name">Nenek Wati</span>
+            <span class="dialog-tap-hint" id="dialog-tap-hint">Ketuk teks untuk mempercepat</span>
+          </div>
+
+          <div class="dialog-text" id="dialog-text" aria-live="polite"></div>
+
+          <div class="dialog-reaction hidden" id="dialog-reaction" role="status"></div>
+          <div class="tutorial-hint hidden" id="tutorial-hint"></div>
+
+          <div class="dialog-footer">
+            <button id="btn-open-questions" class="btn btn-secondary">
+              <span aria-hidden="true">💬</span> Tanya Nenek (<span id="questions-left-label">6/6</span>)
+            </button>
+            <button id="btn-next-dialog" class="btn btn-primary">
+              Lanjut <span aria-hidden="true">▸</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- QUESTION DRAWER (4 GDD Questions) -->
+        <div class="question-panel hidden" id="question-panel" aria-label="Pilihan Pertanyaan untuk Nenek">
+          <div class="panel-head-inline">
+            <div>
+              <strong>Ajukan Pertanyaan</strong>
+              <span class="q-target-note" id="q-target-note">Pilih kata terlebih dahulu</span>
+            </div>
+            <div class="q-meta">
+              <span class="q-cost-badge" id="q-cost-badge">−4 Energi</span>
+              <button id="btn-close-questions" class="btn btn-ghost btn-sm" aria-label="Tutup panel pertanyaan">✕</button>
+            </div>
+          </div>
+          <div class="question-grid" id="question-grid"></div>
+        </div>
+      </section>
+
+      <!-- RIGHT COLUMN: VOCABULARY BOOK -->
+      <aside class="book-column" id="book-column" aria-label="Buku Kosakata">
+        <div class="book-header">
+          <div>
+            <h2><span aria-hidden="true">📖</span> Buku Kosakata</h2>
+            <p class="book-sub" id="book-sub">Pilih kata untuk menebak maknanya</p>
+          </div>
+          <button id="btn-close-book-mobile" class="btn btn-ghost btn-sm mobile-only" aria-label="Tutup Buku Kosakata">Tutup ✕</button>
+        </div>
+
+        <!-- 20 Word Slots -->
+        <div class="word-slots-grid" id="word-slots-grid" role="listbox" aria-label="Daftar 20 Kata Daerah"></div>
+
+        <!-- Active Word Guessing Box -->
+        <div class="guess-box" id="guess-box">
+          <div class="guess-empty" id="guess-empty">
+            Belum ada kata yang dipilih. Kata bergaris bawah dalam cerita akan muncul di sini.
+          </div>
+
+          <div class="guess-active hidden" id="guess-active">
+            <div class="guess-word-head">
+              <img id="guess-word-icon" class="pixel-icon-lg" alt="" />
+              <div class="guess-word-meta">
+                <div class="guess-title-row">
+                  <h3 id="guess-word-form">nela</h3>
+                  <span class="word-status-pill" id="guess-word-status">○ Belum ditebak</span>
+                </div>
+                <span class="guess-category" id="guess-word-category">Tindakan · Kesempatan 2/2</span>
+              </div>
+            </div>
+
+            <div class="clue-notes" id="clue-notes">
+              <h4>Catatan Cerita &amp; Petunjuk</h4>
+              <ul id="clue-notes-list"></ul>
+            </div>
+
+            <div class="guess-choices-area" id="guess-choices-area">
+              <p class="choices-prompt">Pilih makna yang paling tepat:</p>
+              <div class="choices-grid" id="choices-grid"></div>
+            </div>
+
+            <div class="guess-resolved hidden" id="guess-resolved">
+              <p id="guess-resolved-text"></p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- HOW TO PLAY MODAL -->
+    <section id="howto-modal" class="overlay-screen hidden" role="dialog" aria-modal="true" aria-labelledby="howto-title">
+      <div class="modal-card">
+        <h2 id="howto-title">Cara Bermain</h2>
+        <ol class="howto-list">
+          <li><strong>Dengarkan Cerita:</strong> Nenek Wati bercerita di teras. Kata daerah ditandai dengan <u>garis bawah</u>.</li>
+          <li><strong>Amati Petunjuk:</strong> Perhatikan gestur Nenek dan benda di teras yang tersorot, serta konteks kalimatnya. Setiap kata muncul minimal dua kali!</li>
+          <li><strong>Tebak di Buku Kosakata:</strong> Klik kata di dialog atau di Buku Kosakata, lalu pilih 1 dari 4 arti. Tiap kata punya <strong>2 kesempatan</strong>.</li>
+          <li><strong>Gunakan 6 Pertanyaan:</strong> Ragu? Ajukan salah satu dari 4 pertanyaan kepada Nenek (menguras sedikit energi, tanpa mengurangi kepercayaan).</li>
+          <li><strong>Jaga Energi &amp; Kepercayaan:</strong> Tebakan tepat memulihkan +3 Energi &amp; +8 Kepercayaan. Tebakan salah mengurangi −8 Energi &amp; −15 Kepercayaan.</li>
+          <li><strong>Tujuan Akhir:</strong> Catat minimal <strong>15 dari 20 kata</strong> sebelum energi Nenek habis menjadi 0!</li>
+        </ol>
+        <div class="modal-actions">
+          <button id="btn-close-howto" class="btn btn-primary">Mengerti</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAUSE / SETTINGS MODAL -->
+    <section id="settings-modal" class="overlay-screen hidden" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+      <div class="modal-card">
+        <h2 id="settings-title">Jeda &amp; Pengaturan</h2>
+        <div class="setting-row">
+          <label for="opt-volume">Volume Audio (<span id="opt-volume-val">70%</span>)</label>
+          <input type="range" id="opt-volume" min="0" max="100" value="70" />
+        </div>
+        <div class="setting-row setting-inline">
+          <label for="opt-mute">Bisukan Suara</label>
+          <input type="checkbox" id="opt-mute" />
+        </div>
+        <div class="setting-row">
+          <label>Ukuran Teks</label>
+          <div class="segmented-btns" id="opt-text-size">
+            <button type="button" data-size="small" class="seg-btn">Kecil</button>
+            <button type="button" data-size="medium" class="seg-btn active">Sedang</button>
+            <button type="button" data-size="large" class="seg-btn">Besar</button>
+          </div>
+        </div>
+        <div class="setting-row setting-inline">
+          <label for="opt-contrast">Mode Kontras Tinggi (Aksesibilitas)</label>
+          <input type="checkbox" id="opt-contrast" />
+        </div>
+
+        <div class="modal-actions">
+          <button id="btn-resume" class="btn btn-primary">Lanjutkan</button>
+          <button id="btn-restart-from-pause" class="btn btn-ghost">Ulang Sesi</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENDING SCREEN -->
+    <section id="ending-screen" class="overlay-screen hidden" role="dialog" aria-modal="true" aria-labelledby="ending-title">
+      <div class="ending-card">
+        <div class="ending-badge" id="ending-badge">15 / 20 Kata Terjaga</div>
+        <h2 id="ending-title">Menang – Warisan</h2>
+        <p class="ending-summary" id="ending-summary"></p>
+
+        <div class="ending-canvas-wrap">
+          <canvas id="ending-canvas" aria-label="Ilustrasi akhir cerita"></canvas>
+        </div>
+
+        <p class="ending-epilogue" id="ending-epilogue"></p>
+
+        <details class="ending-review" open>
+          <summary>Catatan Lengkap 20 Kosakata Bahasa Talu</summary>
+          <div class="review-grid" id="ending-review-grid"></div>
+        </details>
+
+        <details class="ending-telemetry">
+          <summary>Ringkasan Playtest (Durasi &amp; Metrik Sesi)</summary>
+          <div class="telemetry-box" id="ending-telemetry-box"></div>
+        </details>
+
+        <div class="modal-actions">
+          <button id="btn-play-again" class="btn btn-primary btn-lg">Main Lagi dari Awal</button>
+          <button id="btn-copy-telemetry" class="btn btn-secondary">Salin Log Playtest</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="js/ui.js"></script>
+</body>
+</html>

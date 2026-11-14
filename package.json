@@ -1,0 +1,11 @@
+{
+  "name": "melestarikan-tutur-terakhir",
+  "version": "0.1.0",
+  "description": "Game puzzle kata naratif HTML5 - Melestarikan: Tutur Terakhir (Prototipe Test-Jalan)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["html5", "narrative-puzzle", "game", "bahasa-daerah"],
+  "license": "MIT"
+}

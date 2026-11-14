@@ -1,0 +1,1078 @@
+{
+  "meta": {
+    "title": "Melestarikan: Tutur Terakhir",
+    "languageName": "Bahasa Talu (Bahasa Daerah Fiktif)",
+    "culturalNotice": "Purwarupa test-jalan ini menggunakan bahasa daerah fiktif (Bahasa Talu) yang dirancang secara hormat dengan pola bunyi Nusantara untuk menguji alur puzzle dan narasi, sebelum kolaborasi dan validasi bersama penutur asli."
+  },
+  "tutorial": [
+    {
+      "id": "tut_1",
+      "speaker": "Nenek Wati",
+      "text": "Sore mulai turun di teras ini, Nak. Mendekatlah sebelum angin malam membawa kabut.",
+      "gesture": "wave",
+      "expression": "happy",
+      "hint": "Ketuk kotak dialog untuk mempercepat teks atau klik Lanjut saat siap."
+    },
+    {
+      "id": "tut_2",
+      "speaker": "Nenek Wati",
+      "text": "Buka buku catatanmu itu. Nenek ingin bercerita dengan tutur lama desa kita sebelum ingatan ini redup bersama senja.",
+      "gesture": "hold_book",
+      "expression": "neutral",
+      "hint": "Kata bergaris bawah akan masuk ke Buku Kosakata. Tebak artinya dari gestur Nenek, benda di teras, dan konteks cerita—tidak pernah ada terjemahan langsung."
+    }
+  ],
+  "questionTemplates": [
+    {
+      "id": "q_function",
+      "label": "Itu untuk apa, Nek?",
+      "icon": "hands"
+    },
+    {
+      "id": "q_repeat",
+      "label": "Bisa ditunjukkan lagi?",
+      "icon": "eye"
+    },
+    {
+      "id": "q_feeling",
+      "label": "Nenek rasakan apa waktu itu?",
+      "icon": "heart"
+    },
+    {
+      "id": "q_who",
+      "label": "Siapa itu, Nek?",
+      "icon": "family"
+    }
+  ],
+  "words": [
+    {
+      "id": "w01",
+      "form": "nela",
+      "meaning": "duduk",
+      "distractors": ["berdiri", "berbaring", "berjalan"],
+      "category": "tindakan",
+      "visualClue": "duduk",
+      "terraceTarget": "mat",
+      "gesture": "sit_pat",
+      "narrativeClue": [
+        { "segment": 1, "note": "Disebut saat Nenek menepuk ruang di sampingnya agar kamu tidak terus berdiri." },
+        { "segment": 1, "note": "Disebut lagi saat Nenek menyebut posisi bersila di atas anyaman lantai." }
+      ],
+      "difficulty": 1,
+      "reactions": {
+        "correct": "Benar sekali, Nak. Ayo nela dengan nyaman di sini.",
+        "wrongFirst": "Bukan itu, Nak... perhatikan tangan Nenek yang menepuk lantai di sebelah sini.",
+        "wrongSecond": "Ah... yang Nenek maksud tadi itu 'duduk'. Tidak apa, mari kita lanjutkan perlahan."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Itu bukan benda, Nak, melainkan cara kita beristirahat di teras agar lutut tidak pegal berdiri.",
+          "vague": "Biar badan tidak capek berdiri saja..."
+        },
+        "q_repeat": {
+          "clear": "Lihat tangan Nenek menepuk ruang kosong di sebelah sini—ayo lipat kakimu dan turun ke sini.",
+          "vague": "Di sebelah sini saja..."
+        },
+        "q_feeling": {
+          "clear": "Tenang sekali rasanya saat kita bisa beristirahat bersebelahan seperti ini.",
+          "vague": "Lumayan tenang, walau punggung tua ini agak pegal."
+        },
+        "q_who": {
+          "clear": "Bukan siapa-siapa, Nak. Itu gerakan yang sedang Nenek ajak kamu lakukan sekarang.",
+          "vague": "Bukan tentang orang..."
+        }
+      }
+    },
+    {
+      "id": "w02",
+      "form": "kalasa",
+      "meaning": "tikar",
+      "distractors": ["bantal", "selimut", "tirai"],
+      "category": "benda",
+      "visualClue": "tikar",
+      "terraceTarget": "mat",
+      "gesture": "point_mat",
+      "narrativeClue": [
+        { "segment": 1, "note": "Disebut saat Nenek merapikan alas anyaman pandan di lantai teras." },
+        { "segment": 1, "note": "Disebut sebagai alas tempat duduk bersila agar lutut tidak kena papan dingin." }
+      ],
+      "difficulty": 1,
+      "reactions": {
+        "correct": "Iya! Anyaman pandan tua ini masih wangi kalau sore.",
+        "wrongFirst": "Bukan itu... lihat benda pipih yang Nenek bentangkan di atas papan teras ini.",
+        "wrongSecond": "Sayang sekali... benda alas ini artinya 'tikar'. Nenek dulu belajar menganyamnya waktu muda."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Untuk membentangkan alas duduk di atas lantai papan supaya kaki dan lutut tidak dingin.",
+          "vague": "Untuk alas di bawah sini..."
+        },
+        "q_repeat": {
+          "clear": "Ini dia yang di bawah kita! Lembar anyaman pandan panjang yang digelar di teras.",
+          "vague": "Yang di lantai teras ini."
+        },
+        "q_feeling": {
+          "clear": "Hangat rasanya, mengingatkan Nenek pada sore-sore ramai bersama ibu dulu.",
+          "vague": "Sudah tua, tapi masih setia menemani."
+        },
+        "q_who": {
+          "clear": "Bukan orang, Nak. Itu benda alas lantai yang dibuat oleh mendiang ibu Nenek.",
+          "vague": "Bukan siapa-siapa, hanya benda di lantai."
+        }
+      }
+    },
+    {
+      "id": "w03",
+      "form": "kumbau",
+      "meaning": "periuk",
+      "distractors": ["piring", "kendi", "keranjang"],
+      "category": "benda",
+      "visualClue": "periuk",
+      "terraceTarget": "pot",
+      "gesture": "point_pot",
+      "narrativeClue": [
+        { "segment": 2, "note": "Disebut saat Nenek menunjuk wadah tanah liat berasap di dekat pintu dapur." },
+        { "segment": 2, "note": "Nenek memasak bubur jagung di dalamnya." }
+      ],
+      "difficulty": 1,
+      "reactions": {
+        "correct": "Tepat! Bubur jagung di dalamnya hampir dingin, tapi harumnya masih ada.",
+        "wrongFirst": "Belum tepat, Nak. Lihat benda bulat dari tanah liat tempat Nenek memasak bubur tadi.",
+        "wrongSecond": "Aduh, terlewat... kumbau itu artinya 'periuk' tanah liat."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Untuk menanak nasi atau merebus bubur jagung di atas api supaya rasanya lebih sedap dan harum tanah.",
+          "vague": "Untuk memasak sesuatu yang berkuah di dapur."
+        },
+        "q_repeat": {
+          "clear": "Tuh, di sudut dekat pintu dapur—wadah bulat tanah liat yang bagian luarnya menghitam karena asap!",
+          "vague": "Di dekat pintu dapur sana."
+        },
+        "q_feeling": {
+          "clear": "Bau masakan dari wadah itu selalu bikin perut terasa pulang ke rumah.",
+          "vague": "Biasa saja, bau asap dapur."
+        },
+        "q_who": {
+          "clear": "Bukan orang, itu perkakas dapur dari tanah liat bakar.",
+          "vague": "Hanya perkakas dapur."
+        }
+      }
+    },
+    {
+      "id": "w04",
+      "form": "damo",
+      "meaning": "tungku",
+      "distractors": ["kayu bakar", "panci besi", "wajan"],
+      "category": "benda",
+      "visualClue": "tungku",
+      "terraceTarget": "stove",
+      "gesture": "point_stove",
+      "narrativeClue": [
+        { "segment": 2, "note": "Benda di bawah periuk yang menyimpan bara api belum padam." },
+        { "segment": 2, "note": "Apinya dijaga pelan supaya dasar periuk tidak gosong." }
+      ],
+      "difficulty": 1,
+      "reactions": {
+        "correct": "Betul! Bara di dalamnya masih hangat menahan angin senja.",
+        "wrongFirst": "Bukan itu, Nak. Lihat tempat bara api menyala tepat di bawah periuk.",
+        "wrongSecond": "Sayang... damo itu maksudnya 'tungku' tempat meletakkan api masak."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Tempat menyalakan kayu dan menjaga bara api agar periuk bisa duduk stabil di atasnya.",
+          "vague": "Tempat menahan panas api di bawah masakan."
+        },
+        "q_repeat": {
+          "clear": "Lihat ke bagian paling bawah di sudut dapur—dudukan tanah yang masih memerah baranya.",
+          "vague": "Yang merah di bagian bawah sana."
+        },
+        "q_feeling": {
+          "clear": "Dulu dapur selalu hangat oleh baranya sebelum matahari terbenam.",
+          "vague": "Hangat di dekat sini, tapi sebentar lagi dingin."
+        },
+        "q_who": {
+          "clear": "Bukan orang, Nak. Itu tempat api di dapur.",
+          "vague": "Bukan siapa-siapa."
+        }
+      }
+    },
+    {
+      "id": "w05",
+      "form": "bonto",
+      "meaning": "lesung",
+      "distractors": ["talenan", "parutan", "cobek"],
+      "category": "benda",
+      "visualClue": "lesung",
+      "terraceTarget": "mortar",
+      "gesture": "point_mortar",
+      "narrativeClue": [
+        { "segment": 3, "note": "Benda kayu jati besar yang dikeluarkan dari kolong rumah." },
+        { "segment": 3, "note": "Wadah tempat Nenek menghaluskan beras dan rempah." }
+      ],
+      "difficulty": 1,
+      "reactions": {
+        "correct": "Benar! Kayu jatinya sudah cekung karena dipakai puluhan tahun.",
+        "wrongFirst": "Bukan itu... ukurannya cukup besar dari kayu jati, punya lubang dalam di tengahnya.",
+        "wrongSecond": "Ah, sayang... bonto itu artinya 'lesung' kayu."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Wadah kayu berat berlubang dalam, tempat menaruh gabah, beras, atau rempah untuk dihaluskan.",
+          "vague": "Wadah dari kayu keras di sudut teras."
+        },
+        "q_repeat": {
+          "clear": "Itu di sisi dinding teras! Kayu besar berlubang dalam dengan batang penumbuk di sebelahnya.",
+          "vague": "Di dekat dinding papan."
+        },
+        "q_feeling": {
+          "clear": "Bunyi kayunya dulu seperti musik desa setiap menjelang sore.",
+          "vague": "Berat sekali kalau harus mengangkatnya sendiri sekarang."
+        },
+        "q_who": {
+          "clear": "Bukan orang, itu alat kayu tua untuk mengolah bahan makanan.",
+          "vague": "Alat di dapur."
+        }
+      }
+    },
+    {
+      "id": "w06",
+      "form": "leko",
+      "meaning": "menumbuk",
+      "distractors": ["memotong", "mengaduk", "membakar"],
+      "category": "tindakan",
+      "visualClue": "menumbuk",
+      "terraceTarget": "mortar",
+      "gesture": "pound",
+      "narrativeClue": [
+        { "segment": 3, "note": "Dilakukan dengan lengan menggunakan batang kayu di dalam lesung." },
+        { "segment": 3, "note": "Suaranya bersahutan di halaman desa sebelum makan malam." }
+      ],
+      "difficulty": 2,
+      "reactions": {
+        "correct": "Ya, begitu! Pukulan berirama sampai berasnya halus.",
+        "wrongFirst": "Belum tepat, lihat gerak lengan Nenek yang mengayun naik-turun ke dalam lesung.",
+        "wrongSecond": "Terlewat satu kata... leko itu artinya 'menumbuk'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Gerakan mengayunkan alu ke bawah berulang-ulang untuk memisahkan kulit padi atau menghaluskan bumbu.",
+          "vague": "Pekerjaan tangan yang butuh tenaga di dekat lesung."
+        },
+        "q_repeat": {
+          "clear": "Lihat lengan Nenek—menggenggam batang kayu lalu dihentakkan berulang kali ke dalam lubang!",
+          "vague": "Mengayun ke bawah seperti ini..."
+        },
+        "q_feeling": {
+          "clear": "Lelah di bahu, tapi hati senang saat para ibu saling bersahutan irama di halaman.",
+          "vague": "Membuat bahu cepat pegal."
+        },
+        "q_who": {
+          "clear": "Bukan orang, Nak. Itu kegiatan mengolah padi dan rempah.",
+          "vague": "Bukan siapa-siapa."
+        }
+      }
+    },
+    {
+      "id": "w07",
+      "form": "sorai",
+      "meaning": "wadah sirih",
+      "distractors": ["kotak perhiasan", "tempat garam", "wadah kapur"],
+      "category": "benda",
+      "visualClue": "wadah sirih",
+      "terraceTarget": "sirih",
+      "gesture": "hold_sirih",
+      "narrativeClue": [
+        { "segment": 4, "note": "Kotak kuningan di samping bantal Nenek." },
+        { "segment": 4, "note": "Berisi daun hijau dan kapur untuk dikunyah saat tamu datang." }
+      ],
+      "difficulty": 2,
+      "reactions": {
+        "correct": "Iya, benar! Ini selalu Nenek siapkan kalau ada tamu yang datang bertutur.",
+        "wrongFirst": "Bukan itu... di dalamnya ada daun hijau, pinang, dan sedikit kapur untuk dikunyah.",
+        "wrongSecond": "Sayang sekali... benda kuningan itu artinya 'wadah sirih'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Untuk menyimpan daun sirih, buah pinang, dan kapur supaya tetap segar sebagai suguhan hormat.",
+          "vague": "Kotak kecil tempat menyimpan daun kunyahan."
+        },
+        "q_repeat": {
+          "clear": "Kotak kuningan berukir tepat di samping duduk Nenek ini! Tutupnya bisa dibuka.",
+          "vague": "Kotak kecil di samping Nenek."
+        },
+        "q_feeling": {
+          "clear": "Membukanya selalu membuat Nenek ingat sopan santun orang tua zaman dulu.",
+          "vague": "Aromanya hangat dan agak getir."
+        },
+        "q_who": {
+          "clear": "Bukan orang, Nak. Itu tempat suguhan tradisional di teras.",
+          "vague": "Bukan orang."
+        }
+      }
+    },
+    {
+      "id": "w08",
+      "form": "serin",
+      "meaning": "menganyam",
+      "distractors": ["menjahit", "memahat", "mencuci"],
+      "category": "tindakan",
+      "visualClue": "menganyam",
+      "terraceTarget": "mat",
+      "gesture": "weave",
+      "narrativeClue": [
+        { "segment": 4, "note": "Tangan Nenek terus menyilangkan helai daun pandan satu sama lain." },
+        { "segment": 5, "note": "Hasilnya bisa berupa tikar atau bakul besar untuk panen." }
+      ],
+      "difficulty": 2,
+      "reactions": {
+        "correct": "Benar sekali! Satu helai masuk ke atas, satu ke bawah, sampai rapat.",
+        "wrongFirst": "Bukan... perhatikan jari Nenek yang menyilang-nyilangkan helai daun pandan tanpa jarum.",
+        "wrongSecond": "Ah, terlewat... serin itu artinya 'menganyam'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Menyilangkan bilah bambu atau daun pandan berselang-seling hingga terjalin menjadi tikar atau keranjang.",
+          "vague": "Menjalin helai-helai daun supaya menyatu."
+        },
+        "q_repeat": {
+          "clear": "Lihat jari Nenek—tangan kanan menyelipkan helai ke atas dan ke bawah helai di tangan kiri!",
+          "vague": "Jari menyilang begini..."
+        },
+        "q_feeling": {
+          "clear": "Sangat menenangkan, seperti merapikan pikiran yang kusut.",
+          "vague": "Butuh kesabaran, mata sudah agak kabur."
+        },
+        "q_who": {
+          "clear": "Bukan orang, Nak. Itu keterampilan tangan membuat tikar dan bakul.",
+          "vague": "Pekerjaan tangan saja."
+        }
+      }
+    },
+    {
+      "id": "w09",
+      "form": "kandi",
+      "meaning": "bakul",
+      "distractors": ["karung", "ember", "tudung saji"],
+      "category": "benda",
+      "visualClue": "bakul",
+      "terraceTarget": "basket",
+      "gesture": "point_basket",
+      "narrativeClue": [
+        { "segment": 5, "note": "Hasil anyaman berbentuk wadah bundar untuk menyimpan beras panen." },
+        { "segment": 5, "note": "Terlihat di sudut ruangan saat cahaya lampu dinyalakan." }
+      ],
+      "difficulty": 2,
+      "reactions": {
+        "correct": "Betul, Nak! Anyaman bambunya kuat menampung beras hasil panen.",
+        "wrongFirst": "Bukan itu... wadah ini dianyam dari bambu dan bentuknya bulat terbuka untuk beras.",
+        "wrongSecond": "Sayang... kandi itu artinya 'bakul'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Wadah anyaman bambu bertelinga atau berbibir bulat untuk menaruh beras, umbi, atau hasil kebun.",
+          "vague": "Wadah anyaman untuk menampung hasil panen."
+        },
+        "q_repeat": {
+          "clear": "Di dekat tiang teras sana—wadah anyaman bundar berwarna cokelat bambu tua!",
+          "vague": "Wadah anyaman di sudut."
+        },
+        "q_feeling": {
+          "clear": "Kalau benda itu penuh, hati seisi rumah merasa tenang menghadapi musim kemarau.",
+          "vague": "Sekarang sudah agak kosong isinya."
+        },
+        "q_who": {
+          "clear": "Bukan orang, itu wadah anyaman bambu.",
+          "vague": "Hanya wadah anyaman."
+        }
+      }
+    },
+    {
+      "id": "w10",
+      "form": "lami",
+      "meaning": "pelita",
+      "distractors": ["lentera kaca", "lilin", "obor"],
+      "category": "benda",
+      "visualClue": "pelita",
+      "terraceTarget": "lamp",
+      "gesture": "point_lamp",
+      "narrativeClue": [
+        { "segment": 5, "note": "Memiliki sumbu dan minyak yang dinyalakan di tiang saat langit redup." },
+        { "segment": 5, "note": "Cahayanya kecil tapi cukup menerangi isi ruangan." }
+      ],
+      "difficulty": 2,
+      "reactions": {
+        "correct": "Ya! Api kecilnya menari-nari menemani cerita senja kita.",
+        "wrongFirst": "Belum tepat... benda ini memakai minyak dan sumbu kain kecil yang digantung di tiang.",
+        "wrongSecond": "Aduh, terlewat... lami itu artinya 'pelita' minyak."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Alat penerangan sederhana memakai minyak dan sumbu kapas agar teras tidak gelap gulita.",
+          "vague": "Untuk menerangi teras saat matahari turun."
+        },
+        "q_repeat": {
+          "clear": "Tengok ke atas tiang teras! Wadah kecil berapi kuning dengan sumbu minyak.",
+          "vague": "Cahaya kecil di tiang sana."
+        },
+        "q_feeling": {
+          "clear": "Cahayanya lembut dan hangat di mata, tidak menyilaukan seperti lampu kota.",
+          "vague": "Minyaknya mulai tipis, apinya bergetar."
+        },
+        "q_who": {
+          "clear": "Bukan orang, Nak. Itu sumber cahaya kecil di tiang teras.",
+          "vague": "Bukan orang."
+        }
+      }
+    },
+    {
+      "id": "w11",
+      "form": "maru",
+      "meaning": "pohon",
+      "distractors": ["semak", "pagar", "rumput"],
+      "category": "alam",
+      "visualClue": "pohon",
+      "terraceTarget": "tree",
+      "gesture": "point_tree",
+      "narrativeClue": [
+        { "segment": 6, "note": "Berbatang tinggi dengan dahan tempat anak-anak bergelantungan, di ujung halaman." },
+        { "segment": 6, "note": "Di bawah akarnya ayam mematuk jagung, dan embun jatuh dari daunnya." }
+      ],
+      "difficulty": 2,
+      "reactions": {
+        "correct": "Benar! Buahnya manis setiap akhir musim hujan.",
+        "wrongFirst": "Bukan itu... ia tinggi berbatang kokoh, punya akar, dahan, dan daun mangga yang rindang.",
+        "wrongSecond": "Sayang sekali... maru itu artinya 'pohon'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Tumbuhan besar berbatang kayu yang memberi keteduhan, buah mangga, dan dahan tempat berteduh.",
+          "vague": "Yang tumbuh tinggi meneduhkan halaman."
+        },
+        "q_repeat": {
+          "clear": "Lihat keluar teras di ujung halaman—batang besar tinggi dengan tajuk daun rindang!",
+          "vague": "Yang besar di halaman luar."
+        },
+        "q_feeling": {
+          "clear": "Rasa sejuk dan bangga; dia tumbuh bersama generasi keluarga kami.",
+          "vague": "Sudah tua sekali, sama seperti Nenek."
+        },
+        "q_who": {
+          "clear": "Bukan orang, Nak. Itu makhluk hidup berbatang kayu di ujung halaman.",
+          "vague": "Bukan orang."
+        }
+      }
+    },
+    {
+      "id": "w12",
+      "form": "kora",
+      "meaning": "ayam",
+      "distractors": ["bebek", "kucing", "kambing"],
+      "category": "alam",
+      "visualClue": "ayam",
+      "terraceTarget": "chicken",
+      "gesture": "point_yard",
+      "narrativeClue": [
+        { "segment": 6, "note": "Hewan betina yang mematuk sisa jagung di bawah pohon sebelum masuk kandang." },
+        { "segment": 6, "note": "Yang jantan berkokok membangunkan desa setiap subuh." }
+      ],
+      "difficulty": 2,
+      "reactions": {
+        "correct": "Iya! Suara kokoknya jadi penanda waktu pagi di desa ini.",
+        "wrongFirst": "Bukan... unggas ini mematuk biji jagung di tanah dan yang jantan berkokok subuh.",
+        "wrongSecond": "Terlewat, Nak... kora itu artinya 'ayam'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Unggas peliharaan warga desa yang mematuk gabah di tanah dan berkokok di pagi buta.",
+          "vague": "Hewan berkaki dua di bawah tangga teras."
+        },
+        "q_repeat": {
+          "clear": "Tuh di dekat akar pohon halaman—hewan berbulu dengan jengger merah yang mematuk tanah!",
+          "vague": "Yang bergerak di tanah halaman."
+        },
+        "q_feeling": {
+          "clear": "Lucu dan akrab, pagi terasa sepi kalau tidak ada suaranya.",
+          "vague": "Sebentar lagi dia masuk kandang untuk tidur."
+        },
+        "q_who": {
+          "clear": "Bukan manusia, Nak, melainkan hewan unggas di halaman.",
+          "vague": "Hanya hewan di halaman."
+        }
+      }
+    },
+    {
+      "id": "w13",
+      "form": "dira",
+      "meaning": "hujan",
+      "distractors": ["embun", "kabut", "petir"],
+      "category": "alam",
+      "visualClue": "hujan",
+      "terraceTarget": "rain",
+      "gesture": "hand_rain",
+      "narrativeClue": [
+        { "segment": 7, "note": "Turun mengetuk atap rumbia dan membasahi tanah kering di sore hari." },
+        { "segment": 7, "note": "Membuat makhluk kecil buru-buru berteduh karena sayapnya basah." }
+      ],
+      "difficulty": 2,
+      "reactions": {
+        "correct": "Benar! Suaranya di atap rumbia selalu mengundang kantuk yang damai.",
+        "wrongFirst": "Bukan itu... ia berupa titik-titik air dari langit yang membasahi tanah dan mengetuk atap.",
+        "wrongSecond": "Ah, sayang... dira itu artinya 'hujan'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Air yang turun dari awan sore, menyegarkan tanaman dan menyejukkan tanah berdebu.",
+          "vague": "Sesuatu yang turun membasahi genting dan daun."
+        },
+        "q_repeat": {
+          "clear": "Lihat ke luar teras—titik-titik air jatuh miring dari langit senja!",
+          "vague": "Dengar suara rintik di atap."
+        },
+        "q_feeling": {
+          "clear": "Sejuk bercampur sedikit sendu; aroma tanah basah selalu membawa kenangan.",
+          "vague": "Dingin menusuk tulang tua Nenek."
+        },
+        "q_who": {
+          "clear": "Bukan siapa-siapa, Nak. Itu peristiwa alam dari langit.",
+          "vague": "Bukan orang."
+        }
+      }
+    },
+    {
+      "id": "w14",
+      "form": "kiwa",
+      "meaning": "burung",
+      "distractors": ["kelelawar", "kupu-kupu", "jangkrik"],
+      "category": "alam",
+      "visualClue": "burung",
+      "terraceTarget": "bird",
+      "gesture": "point_tree",
+      "narrativeClue": [
+        { "segment": 7, "note": "Makhluk bersayap yang hinggap berteduh di dahan pohon saat hujan sore." },
+        { "segment": 7, "note": "Pulang ke sarangnya sebelum langit gelap." }
+      ],
+      "difficulty": 2,
+      "reactions": {
+        "correct": "Tepat sekali! Lihat, ia mengepakkan sayapnya mengeringkan bulu.",
+        "wrongFirst": "Belum tepat... dia bersayap, bertengger di dahan pohon, dan pulang ke sarang sebelum gelap.",
+        "wrongSecond": "Terlewat... kiwa itu artinya 'burung'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Hewan bersayap dan berparuh yang terbang bebas, bertengger di ranting, dan berkicau.",
+          "vague": "Makhluk kecil bersayap yang berteduh di dahan."
+        },
+        "q_repeat": {
+          "clear": "Lihat di dahan pohon sana—sosok kecil bertengger sambil mengibaskan sayapnya yang basah!",
+          "vague": "Di dahan pohon di luar."
+        },
+        "q_feeling": {
+          "clear": "Iri sedikit melihat sayapnya bisa pulang ke mana saja, sementara Nenek tetap di sini.",
+          "vague": "Kelihatan kedinginan di dahan itu."
+        },
+        "q_who": {
+          "clear": "Bukan orang, Nak. Itu satwa kecil bersayap di dahan.",
+          "vague": "Hewan di dahan."
+        }
+      }
+    },
+    {
+      "id": "w15",
+      "form": "tado",
+      "meaning": "kakek",
+      "distractors": ["paman", "tetangga", "kepala desa"],
+      "category": "kerabat",
+      "visualClue": "kakek",
+      "terraceTarget": "photo",
+      "gesture": "point_photo",
+      "narrativeClue": [
+        { "segment": 8, "note": "Lelaki tua berpeci di samping Nenek pada foto usang di dinding." },
+        { "segment": 8, "note": "Pasangan Nenek yang membesarkan anak-anak di rumah panggung ini." }
+      ],
+      "difficulty": 2,
+      "reactions": {
+        "correct": "Iya, Nak... dia paling suka kalau anak-anak duduk melingkar mendengar dongengnya.",
+        "wrongFirst": "Bukan itu... dialah pasangan hidup Nenek di foto itu, lelaki tua yang membesarkan orang tuamu.",
+        "wrongSecond": "Ah... dengan pelan Nenek beritahu, tado itu artinya 'kakek'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Itu bukan benda, melainkan sebutan hormat untuk orang tua laki-laki dari ayah atau ibumu.",
+          "vague": "Bukan benda, itu panggilan keluarga."
+        },
+        "q_repeat": {
+          "clear": "Lihat ke bingkai foto di dinding papan—lelaki tua tersenyum di sebelah Nenek muda!",
+          "vague": "Di foto dinding sana."
+        },
+        "q_feeling": {
+          "clear": "Dada terasa hangat sekaligus perih; sudah sepuluh musim kemarau ia berpulang.",
+          "vague": "Nenek masih sering teringat suaranya."
+        },
+        "q_who": {
+          "clear": "Beliau suami Nenek, orang tua laki-laki generasi di atas ayah-ibumu; pelindung rumah ini dulu.",
+          "vague": "Lelaki tua di dalam foto bersama Nenek."
+        }
+      }
+    },
+    {
+      "id": "w16",
+      "form": "nori",
+      "meaning": "anak",
+      "distractors": ["adik", "sahabat", "tamu"],
+      "category": "kerabat",
+      "visualClue": "anak",
+      "terraceTarget": "photo",
+      "gesture": "point_photo",
+      "narrativeClue": [
+        { "segment": 8, "note": "Dua orang yang dibesarkan Nenek dan kakek di rumah panggung hingga merantau ke kota." },
+        { "segment": 8, "note": "Jarang pulang sehingga rumah terasa terlalu luas untuk Nenek seorang." }
+      ],
+      "difficulty": 3,
+      "reactions": {
+        "correct": "Benar... ibu dan pamanmu dulu berlarian di teras ini setiap sore.",
+        "wrongFirst": "Bukan itu, Nak. Mereka adalah buah hati yang Nenek dan Kakek besarkan sejak bayi hingga merantau.",
+        "wrongSecond": "Nenek menghela napas pelan... nori itu artinya 'anak'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Itu sebutan hubungan darah, bukan barang—generasi yang lahir dari rahim seorang ibu.",
+          "vague": "Panggilan untuk keturunan langsung."
+        },
+        "q_repeat": {
+          "clear": "Di foto keluarga itu juga, dua wajah muda yang berdiri di depan Nenek dan Kakek.",
+          "vague": "Yang berdiri di foto keluarga."
+        },
+        "q_feeling": {
+          "clear": "Bangga melihat mereka berhasil di kota, walau sepi sekali rasanya saat hari raya pun kadang tak sempat pulang.",
+          "vague": "Campur aduk antara bangga dan sepi."
+        },
+        "q_who": {
+          "clear": "Putra-putri yang Nenek besarkan sendiri di rumah ini sebelum mereka pergi merantau.",
+          "vague": "Orang-orang muda yang lahir dan besar di rumah ini."
+        }
+      }
+    },
+    {
+      "id": "w17",
+      "form": "sena",
+      "meaning": "rindu",
+      "distractors": ["takut", "sesal", "marah"],
+      "category": "perasaan",
+      "visualClue": "rindu",
+      "terraceTarget": "nenek",
+      "gesture": "hand_heart",
+      "narrativeClue": [
+        { "segment": 9, "note": "Rasa yang memenuhi dada Nenek saat membayangkan langkah kaki ramai di tangga." },
+        { "segment": 9, "note": "Terasa paling dalam saat senja memudar." }
+      ],
+      "difficulty": 3,
+      "reactions": {
+        "correct": "Iya, Nak... perasaan itu tidak pernah tua meski rambut sudah memutih semua.",
+        "wrongFirst": "Bukan perasaan yang keras seperti itu, Nak... ini perasaan hangat yang perih karena ingin bertemu lagi.",
+        "wrongSecond": "Suara Nenek bergetar pelan... sena itu artinya 'rindu'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Bukan alat apa pun—ini sesuatu yang bersemayam di dada saat seseorang yang kita sayangi jauh.",
+          "vague": "Sesuatu di dalam dada saja."
+        },
+        "q_repeat": {
+          "clear": "Lihat tangan Nenek menekan dada pelan sambil menatap tangga kosong itu...",
+          "vague": "Nenek hanya memegangi dada."
+        },
+        "q_feeling": {
+          "clear": "Ingin sekali memeluk lagi orang-orang yang dulu tertawa di teras ini; hangat tapi membuat mata basah.",
+          "vague": "Berat di dada... ingin berjumpa lagi."
+        },
+        "q_who": {
+          "clear": "Bukan orang, Nak, melainkan rasa yang muncul di hati karena memikirkan orang-orang yang jauh.",
+          "vague": "Bukan siapa-siapa, hanya rasa di hati."
+        }
+      }
+    },
+    {
+      "id": "w18",
+      "form": "remo",
+      "meaning": "senja",
+      "distractors": ["fajar", "tengah malam", "mendung"],
+      "category": "perasaan",
+      "visualClue": "senja",
+      "terraceTarget": "sky",
+      "gesture": "point_sky",
+      "narrativeClue": [
+        { "segment": 9, "note": "Waktu saat langit memudar dari warna jingga ke ungu." },
+        { "segment": 9, "note": "Saat pergantian terang ke malam yang Nenek takutkan berlalu sia-sia." }
+      ],
+      "difficulty": 3,
+      "reactions": {
+        "correct": "Betul... waktu paling singkat, namun paling banyak menyimpan cerita.",
+        "wrongFirst": "Bukan waktu itu... perhatikan warna langit sekarang yang berpindah dari jingga ke ungu.",
+        "wrongSecond": "Langit makin ungu... remo itu artinya 'senja'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Bukan benda, melainkan penanda waktu ketika matahari baru saja turun dan langit berubah ungu.",
+          "vague": "Waktu peralihan menuju malam."
+        },
+        "q_repeat": {
+          "clear": "Lihat ke kaki langit di atas pepohonan sana—cahaya jingga terakhir sebelum malam tiba!",
+          "vague": "Lihat saja langit di luar."
+        },
+        "q_feeling": {
+          "clear": "Damai sekaligus berkejaran dengan waktu; sebentar lagi gelap akan menutup suara kita.",
+          "vague": "Sebentar lagi malam penuh."
+        },
+        "q_who": {
+          "clear": "Bukan orang, Nak. Ini nama waktu di penghujung sore.",
+          "vague": "Nama waktu saja."
+        }
+      }
+    },
+    {
+      "id": "w19",
+      "form": "tika",
+      "meaning": "cucu",
+      "distractors": ["keponakan", "tetangga muda", "murid"],
+      "category": "kerabat",
+      "visualClue": "cucu",
+      "terraceTarget": "yard_children",
+      "gesture": "point_children",
+      "narrativeClue": [
+        { "segment": 10, "note": "Anak-anak kecil yang memanggil Nenek Wati dengan sebutan 'Nenek'." },
+        { "segment": 10, "note": "Merekalah yang diharapkan datang bermain pagi hari untuk belajar kata-kata ini." }
+      ],
+      "difficulty": 3,
+      "reactions": {
+        "correct": "Ya! Merekalah harapan terakhir agar tutur desa ini terus bernafas.",
+        "wrongFirst": "Bukan itu... mereka memanggilku 'Nenek'—generasi kecil di bawah anak-anakku.",
+        "wrongSecond": "Nenek menunduk lembut... tika itu artinya 'cucu'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Bukan benda—mereka adalah penerus keluarga yang masih kecil dan suka berlari-lari di halaman.",
+          "vague": "Anak-anak kecil penerus keluarga."
+        },
+        "q_repeat": {
+          "clear": "Lihat Nenek menunjuk setinggi bahu ke arah halaman tempat anak-anak kecil biasa berkumpul!",
+          "vague": "Ke arah halaman tempat bocah-bocah bermain."
+        },
+        "q_feeling": {
+          "clear": "Tersenyum lembut penuh harap; tawa kecil mereka satu-satunya obat lelah Nenek.",
+          "vague": "Ada harapan setiap memikirkan mereka."
+        },
+        "q_who": {
+          "clear": "Anak dari anak-anak kita—generasi termuda di kampung yang memanggilku Nenek.",
+          "vague": "Bocah-bocah yang memanggilku Nenek."
+        }
+      }
+    },
+    {
+      "id": "w20",
+      "form": "pali",
+      "meaning": "menjaga",
+      "distractors": ["melupakan", "meninggalkan", "menyembunyikan"],
+      "category": "tindakan",
+      "visualClue": "menjaga",
+      "terraceTarget": "book",
+      "gesture": "hold_book",
+      "narrativeClue": [
+        { "segment": 10, "note": "Dilakukan terhadap warisan suara agar tidak hilang ditelan waktu." },
+        { "segment": 10, "note": "Nenek menyentuh buku catatanmu agar kata-kata itu tetap hidup." }
+      ],
+      "difficulty": 3,
+      "reactions": {
+        "correct": "Terima kasih, Nak... hati Nenek lega sekarang. Tutur ini aman bersamamu.",
+        "wrongFirst": "Jangan terbalik, Nak... ini kebalikan dari membiarkan sesuatu punah atau terlupa.",
+        "wrongSecond": "Suara Nenek nyaris berbisik... pali itu artinya 'menjaga'."
+      },
+      "questions": {
+        "q_function": {
+          "clear": "Tindakan merawat, melindungi, dan meneruskan sesuatu yang berharga agar tidak punah.",
+          "vague": "Merawat agar tidak hilang."
+        },
+        "q_repeat": {
+          "clear": "Lihat kedua tangan Nenek menangkup buku catatanmu dengan hati-hati seakan melindungi nyala api kecil.",
+          "vague": "Memegang buku catatan ini baik-baik."
+        },
+        "q_feeling": {
+          "clear": "Penuh amanah dan kelegaan bila tahu ada pendengar yang sudi memelihara cerita kami.",
+          "vague": "Ini amanah terakhir Nenek."
+        },
+        "q_who": {
+          "clear": "Bukan orang, Nak. Itu tugas mulia yang Nenek titipkan kepadamu sekarang.",
+          "vague": "Sesuatu yang harus kita lakukan."
+        }
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": 1,
+      "title": "Sambutan di Teras",
+      "theme": "Sambutan dan pengenalan teras",
+      "newWords": ["w01", "w02"],
+      "beats": [
+        {
+          "id": "s1_1",
+          "text": "Mari {w01} di sebelah Nenek sini. Jangan terus berdiri di ujung tangga.",
+          "focusWord": "w01"
+        },
+        {
+          "id": "s1_2",
+          "text": "Nenek sudah membentangkan {w02} pandan ini sejak tadi agar lutut kita tidak kena papan dingin.",
+          "focusWord": "w02"
+        },
+        {
+          "id": "s1_3",
+          "text": "Enak sekali {w01} bersila di atas {w02} anyaman ibu dulu, sambil memandang halaman.",
+          "focusWord": "w02"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Dapur dan Bara",
+      "theme": "Dapur dan makanan",
+      "newWords": ["w03", "w04"],
+      "beats": [
+        {
+          "id": "s2_1",
+          "text": "Coba tengok ke sudut dekat pintu dapur. Di sana masih ada {w03} tanah liat yang mengeluarkan uap hangat.",
+          "focusWord": "w03"
+        },
+        {
+          "id": "s2_2",
+          "text": "Nenek memasak bubur jagung di dalam {w03} itu, tepat di atas bara {w04} yang belum padam.",
+          "focusWord": "w04"
+        },
+        {
+          "id": "s2_3",
+          "text": "Api di {w04} harus dijaga pelan, supaya dasar {w03} tidak gosong.",
+          "focusWord": "w04"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Irama Lesung",
+      "theme": "Dapur dan bahan masakan",
+      "newWords": ["w05", "w06"],
+      "beats": [
+        {
+          "id": "s3_1",
+          "text": "Sebelum memasak tadi, Nenek mengeluarkan {w05} kayu jati itu dari kolong.",
+          "focusWord": "w05"
+        },
+        {
+          "id": "s3_2",
+          "text": "Lengan Nenek memang sudah lemah, tetapi Nenek masih kuat {w06} beras dan rempah di dalam {w05}.",
+          "focusWord": "w06"
+        },
+        {
+          "id": "s3_3",
+          "text": "Dulu suara para ibu {w06} padi di halaman selalu bersahutan sebelum makan malam.",
+          "focusWord": "w06"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Sirih dan Anyaman",
+      "theme": "Kegiatan harian dan peralatan",
+      "newWords": ["w07", "w08"],
+      "beats": [
+        {
+          "id": "s4_1",
+          "text": "Buka sebentar {w07} kuningan di samping bantal Nenek ini. Masih ada daun hijau dan kapur di dalamnya.",
+          "focusWord": "w07"
+        },
+        {
+          "id": "s4_2",
+          "text": "Sambil menikmati isi {w07}, biasanya tangan Nenek tidak pernah diam, terus {w08} daun pandan.",
+          "focusWord": "w08"
+        },
+        {
+          "id": "s4_3",
+          "text": "Ibu Nenek dulu bilang, siapa yang sabar {w08} helai demi helai, hidupnya juga rapi.",
+          "focusWord": "w08"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Pelita yang Menyala",
+      "theme": "Kegiatan harian dan peralatan",
+      "newWords": ["w09", "w10"],
+      "beats": [
+        {
+          "id": "s5_1",
+          "text": "Hasil {w08} Nenek kadang menjadi {w02}, kadang menjadi {w09} besar tempat menyimpan beras hasil panen.",
+          "focusWord": "w09"
+        },
+        {
+          "id": "s5_2",
+          "text": "Lihat, langit makin redup. Tolong nyalakan sumbu {w10} minyak di tiang itu agar wajahmu masih terlihat.",
+          "focusWord": "w10"
+        },
+        {
+          "id": "s5_3",
+          "text": "Cahaya {w10} memang kecil, cukup untuk melihat isi {w09} di sudut ruangan.",
+          "focusWord": "w10"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Halaman dan Pohon Mangga",
+      "theme": "Alam sekitar dan hewan",
+      "newWords": ["w11", "w12"],
+      "beats": [
+        {
+          "id": "s6_1",
+          "text": "Di ujung halaman sana, {w11} mangga tua itu masih berdiri tegak. Dahannya dulu tempat bocah-bocah bermain.",
+          "focusWord": "w11"
+        },
+        {
+          "id": "s6_2",
+          "text": "Di bawah akar {w11} itu, lihat ada seekor {w12} betina yang masih mematuk sisa jagung sebelum masuk kandang.",
+          "focusWord": "w12"
+        },
+        {
+          "id": "s6_3",
+          "text": "Setiap subuh {w12} jantan berkokok membangunkan seluruh desa sebelum embun turun dari daun {w11}.",
+          "focusWord": "w12"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Rintik di Atap",
+      "theme": "Alam sekitar dan hewan",
+      "newWords": ["w13", "w14"],
+      "beats": [
+        {
+          "id": "s7_1",
+          "text": "Dengar atap rumbia mulai berdetak pelan... {w13} sore turun membasahi tanah kering.",
+          "focusWord": "w13",
+          "weather": "rain"
+        },
+        {
+          "id": "s7_2",
+          "text": "Karena {w13} turun, seekor {w14} kecil buru-buru hinggap berteduh di dahan {w11}, sayapnya basah.",
+          "focusWord": "w14",
+          "weather": "rain"
+        },
+        {
+          "id": "s7_3",
+          "text": "Sebentar lagi {w14} itu akan terbang pulang ke sarangnya sebelum langit gelap.",
+          "focusWord": "w14",
+          "weather": "rain"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Bingkai di Dinding",
+      "theme": "Keluarga dan kerabat",
+      "newWords": ["w15", "w16"],
+      "beats": [
+        {
+          "id": "s8_1",
+          "text": "Tengok foto usang di dinding papan itu. Lelaki tua berpeci di sebelah Nenek adalah {w15}-mu, dulu dia paling pandai mendongeng.",
+          "focusWord": "w15"
+        },
+        {
+          "id": "s8_2",
+          "text": "Bersama {w15}-mu, kami membesarkan dua {w16} di rumah panggung ini hingga mereka dewasa dan merantau ke kota.",
+          "focusWord": "w16"
+        },
+        {
+          "id": "s8_3",
+          "text": "Kini para {w16} kami sibuk bekerja di jauh; rumah terasa terlalu luas untuk Nenek seorang.",
+          "focusWord": "w16"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Warna yang Memudar",
+      "theme": "Kenangan, perasaan, dan kehilangan",
+      "newWords": ["w17", "w18"],
+      "beats": [
+        {
+          "id": "s9_1",
+          "text": "Setiap kali angin dingin bertiup, dada Nenek penuh oleh rasa {w17} mendengar langkah kaki para {w16} di tangga ini.",
+          "focusWord": "w17"
+        },
+        {
+          "id": "s9_2",
+          "text": "Di waktu {w18} seperti inilah—saat langit memudar dari jingga ke ungu—rasa {w17} itu terasa paling dalam.",
+          "focusWord": "w18"
+        },
+        {
+          "id": "s9_3",
+          "text": "Jangan biarkan {w18} berlalu begitu saja tanpa ada yang mau mendengar kisah lama kami.",
+          "focusWord": "w18"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Amanah Sebelum Malam",
+      "theme": "Pesan terakhir kepada anak-anak desa",
+      "newWords": ["w19", "w20"],
+      "beats": [
+        {
+          "id": "s10_1",
+          "text": "Besok pagi, para {w19}—bocah-bocah kecil dari rumah seberang yang memanggilku Nenek—akan datang bermain di halaman.",
+          "focusWord": "w19"
+        },
+        {
+          "id": "s10_2",
+          "text": "Tolong ajarkan kata-kata ini kepada para {w19} itu. Bantu Nenek {w20} warisan suara ini agar tidak hilang.",
+          "focusWord": "w20"
+        },
+        {
+          "id": "s10_3",
+          "text": "Bila kamu mau {w20} catatan di bukumu sebelum {w18} habis, suara Nenek akan tetap hidup di bibir mereka.",
+          "focusWord": "w20"
+        }
+      ]
+    }
+  ],
+  "endings": {
+    "fullWin": {
+      "id": "fullWin",
+      "title": "Menang – Warisan Penuh",
+      "badge": "20 / 20 Kata Terjaga",
+      "summary": "Memori Nenek terbuka sepenuhnya; anak-anak desa menirukan seluruh cerita.",
+      "epilogue": "Pagi menyingsing hangat di teras rumah panggung. Anak-anak desa duduk melingkar di atas tikar pandan, menirukan setiap kata Bahasa Talu dari buku catatanmu tanpa satu pun tertinggal. Nenek Wati tersenyum haru—bahasa itu kini bernafas kembali di mulut generasi baru.",
+      "isWin": true
+    },
+    "win": {
+      "id": "win",
+      "title": "Menang – Warisan",
+      "badge": "18–19 / 20 Kata Terjaga",
+      "summary": "Memori terbuka; anak-anak mengulang kata-kata yang tercatat.",
+      "epilogue": "Matahari pagi menghangatkan halaman. Anak-anak desa datang berkumpul mendengarkan cerita dari buku catatanmu. Hampir seluruh kosakata berhasil kau selamatkan, dan tawa kecil mereka menyambung kembali tutur yang nyaris terputus.",
+      "isWin": true
+    },
+    "thinWin": {
+      "id": "thinWin",
+      "title": "Menang – Warisan Tipis",
+      "badge": "15–17 / 20 Kata Terjaga",
+      "summary": "Memori terbuka sebagian; ada kata yang masih tertinggal.",
+      "epilogue": "Meski ada beberapa kata yang terlewat di tengah lelahnya senja, lima belas lebih suara penting berhasil kau kunci di buku. Pagi berikutnya, anak-anak desa mulai mengeja kata-kata itu satu per satu bersama Nenek—benih kecil yang masih sempat ditanam.",
+      "isWin": true
+    },
+    "loss": {
+      "id": "loss",
+      "title": "Kalah – Senyap",
+      "badge": "< 15 Kata Terjaga",
+      "summary": "Nenek tertidur; bahasa ikut redup bersama malam.",
+      "epilogue": "Napas Nenek Wati melemah dan matanya perlahan terpejam di atas tikar. Pelita berkeredap pelan saat malam menutup halaman. Catatanmu masih menyimpan beberapa kata, namun terlalu banyak celah yang belum sempat terjawab. Esok hari, mungkin kamu bisa datang lebih awal untuk mendengarkan lagi.",
+      "isWin": false
+    }
+  }
+}
